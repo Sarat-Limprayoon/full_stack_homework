@@ -18,7 +18,7 @@ class ChangeMachine
 
   def get_change_money_bundle( amount )
     amount = amount.to_f
-    return if amount <= 0.01
+    return if amount < 0.01
 
     money_bundle = MoneyBundle.new
     change_left = (amount * 100).to_i
